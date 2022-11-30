@@ -1,0 +1,3 @@
+dn: uid=testuser,ou=people,dc=example,dc=com
+changetype: modify
+delete: sun-fm-saml2-nameid-info

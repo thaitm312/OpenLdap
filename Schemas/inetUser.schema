@@ -1,9 +1,11 @@
 attributetypes ( 2.16.840.1.113730.3.1.692 NAME 'inetUserStatus'
   DESC '"active", "inactive", or "deleted" status of a user' SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
   SINGLE-VALUE X-ORIGIN 'Nortel subscriber interoperability' )
+
 attributetypes ( 2.16.840.1.113730.3.1.693 NAME 'inetUserHttpURL'
   DESC 'A users Web addresses' SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
   X-ORIGIN 'Nortel subscriber interoperability' )
+  
 attributetypes ( 1.2.840.113556.1.2.102 NAME 'memberOf'
   DESC 'Group that theentry belongs to' SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
   X-ORIGIN 'iPlanet Delegated Administrator' )

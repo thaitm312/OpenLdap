@@ -1,0 +1,4 @@
+dn: uid=testuser,ou=people,dc=example,dc=com
+changetype: modify
+add: objectClass
+objectClass: sunFMSAML2NameIdentifier
