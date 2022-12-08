@@ -12,14 +12,10 @@ changetype: modify
 add: olcModuleLoad
 olcModuleLoad: ppolicy
 
-
-
 dn: olcDatabase={-1}frontend,cn=config
 changetype: modify
 add: olcPasswordHash
 olcPasswordHash: {PBKDF2-SHA512}
-
-
 
 dn: olcOverlay={2}ppolicy,olcDatabase={1}mdb,cn=config
 objectClass: olcOverlayConfig

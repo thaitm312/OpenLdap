@@ -1,17 +1,19 @@
 dn: cn=inetuser,cn=schema,cn=config
 objectClass: olcSchemaConfig
 cn: inetuser
-
 olcAttributeTypes: {0}( 2.16.840.1.113730.3.1.692 NAME 'inetUserStatus' DESC '
- "active", "inactive", or "deleted" status of a user' SYNTAX 1.3.6.1.4.1.1466.
- 115.121.1.15 SINGLE-VALUE X-ORIGIN 'Nortel subscriber interoperability' )
+ "active", "inactive", or "deleted" status of a user' EQUALITY caseIgnoreMatch
+  ORDERING caseIgnoreOrderingMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3
+ .6.1.4.1.1466.115.121.1.15 SINGLE-VALUE X-ORIGIN 'Nortel subscriber interoper
+ ability' )
 olcAttributeTypes: {1}( 2.16.840.1.113730.3.1.693 NAME 'inetUserHttpURL' DESC
- 'A users Web addresses' SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 X-ORIGIN 'Nortel
-  subscriber interoperability' )
+ 'A users Web addresses' EQUALITY caseIgnoreIA5Match SUBSTR caseIgnoreIA5Subst
+ ringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 X-ORIGIN 'Nortel subscriber i
+ nteroperability' )
 olcAttributeTypes: {2}( 1.2.840.113556.1.2.102 NAME 'memberOf' DESC 'Group tha
- t theentry belongs to' SYNTAX 1.3.6.1.4.1.1466.115.121.1.12 X-ORIGIN 'iPlanet
-  Delegated Administrator' )
-  
+ t theentry belongs to' EQUALITY distinguishedNameMatch SUBSTR caseIgnoreSubst
+ ringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.12 X-ORIGIN 'iPlanet Delegated A
+ dministrator' )
 olcObjectClasses: {0}( 2.16.840.1.113730.3.2.130 NAME 'inetUser' DESC 'Auxilia
  ry class which must be present in an entry for delivery of subscriber service
  s' SUP top AUXILIARY MAY ( uid $ inetUserStatus $ inetUserHttpURL $ userPassw

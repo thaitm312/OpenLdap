@@ -1,0 +1,10 @@
+dn: cn=openam,cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: openam
+olcAttributeTypes: {0}( 2.16.840.1.113730.3.1.692 NAME 'inetUserStatus' DESC '"active", "inactive", or "deleted" status of a user' EQUALITY caseIgnoreMatch ORDERING caseIgnoreOrderingMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE X-ORIGIN 'Nortel subscriber interoperability' )
+olcAttributeTypes: {1}( 2.16.840.1.113730.3.1.693 NAME 'inetUserHttpURL' DESC 'A users Web addresses' EQUALITY caseIgnoreIA5Match SUBSTR caseIgnoreIA5SubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 X-ORIGIN 'Nortel subscriber interoperability' )
+olcAttributeTypes: {2}( 1.2.840.113556.1.2.102 NAME 'memberOf' DESC 'Group that the entry belongs to' EQUALITY distinguishedNameMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.12 X-ORIGIN 'iPlanet Delegated Administrator' )
+olcAttributeTypes: {3}( 1.3.6.1.4.1.42.2.27.9.1.500 NAME 'sun-fm-saml2-nameid-infokey' DESC 'SAML 2.0 Name Identifier Information Key' EQUALITY caseIgnoreMatch ORDERING caseIgnoreOrderingMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 X-ORIGIN 'Sun Java System Access Management' )
+olcAttributeTypes: {4}( 1.3.6.1.4.1.42.2.27.9.1.501 NAME 'sun-fm-saml2-nameid-info' DESC 'SAML 2.0 Name Identifier Information' EQUALITY caseIgnoreMatch ORDERING caseIgnoreOrderingMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 X-ORIGIN 'Sun Java System Access Management' )
+olcObjectClasses: {0}( 2.16.840.1.113730.3.2.130 NAME 'inetUser' DESC 'Auxiliary class which must be present in an entry for delivery of subscriber services' SUP top AUXILIARY MAY ( uid $ inetUserStatus $ inetUserHttpURL $ userPassword $ memberOf ) X-ORIGIN 'Nortel subscriber interoperability' )
+olcObjectClasses: {1}( 1.3.6.1.4.1.42.2.27.9.2.200 NAME 'sunFMSAML2NameIdentifier' DESC 'SAML 2.0 name identifier objectclass' SUP top AUXILIARY MAY ( sun-fm-saml2-nameid-infokey $ sun-fm-saml2-nameid-info ) X-ORIGIN 'Sun Java System Access Management' )
